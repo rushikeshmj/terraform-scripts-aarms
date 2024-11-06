@@ -14,7 +14,7 @@ resource "aws_cloudfront_origin_access_control" "cf-s3-oac" {
 
 resource "aws_cloudfront_distribution" "cf-dist" {
   # aliases             = ["0001.alfaaero.com", "0010-uat.alfaaero.com", "0024-uat.alfaaero.com", "0037-sb.alfaaero.com", "0042-sb.alfaaero.com"]
-  aliases             = ["0001-uatcopy.alfaaero.com", "0010-uatcopy.alfaaero.com", "0024-uatcopy.alfaaero.com", "0037-sbcopy.alfaaero.com", "0042-sbcopy.alfaaero.com"]
+  #aliases             = ["0001-uatcopy.alfaaero.com", "0010-uatcopy.alfaaero.com", "0024-uatcopy.alfaaero.com", "0037-sbcopy.alfaaero.com", "0042-sbcopy.alfaaero.com"]
   enabled             = true
   default_root_object = "index.html"
   comment = "${var.env}" 
@@ -81,22 +81,19 @@ resource "null_resource" "cf_invalidation" {
       aws cloudfront create-invalidation \
         --distribution-id ${aws_cloudfront_distribution.cf-dist.id} \
         --region us-east-1 \
-        --paths '/*.ts' \
-          '/assets/i18n/help/fr.json' \
-          '/assets/i18n/help/en.json' \
-          '/assets/i18n/reporting/fr.json' \
-          '/assets/i18n/home/en.json' \
-          '/assets/i18n/recharge/en.json' \
-          '/assets/i18n/customer/fr.json' \
-          '/assets/i18n/database/fr.json' \
-          '/*.html' \
-          '/assets/i18n/tools/fr.json' \
-          '/assets/i18n/statistics/en.json' \
-          '/assets/i18n/statistics/fr.json' \
-          '/index.html' \
-          '/assets/i18n/recharge/fr.json' \
-          '/assets/i18n/home/fr.json' \
-    EOF
+        --paths '/assets/i18n/database/fr.json' \
+                '/assets/i18n/customer/en.json' \
+                '/*.js' \
+                '/assets/i18n/help/fr.json' \
+                '/assets/i18n/tools/fr.json' \
+                '/assets/i18n/statistics/en.json' \
+                '/assets/i18n/statistics/fr.json' \
+                '/index.html' \
+                '/assets/i18n/help/en.json' \
+                '/assets/i18n/recharge/fr.json' \
+                '/assets/i18n/reporting/fr.json' \
+                '/assets/i18n/home/fr.json' \
+                    EOF
   }
   triggers = {
     always_run = "${timestamp()}"

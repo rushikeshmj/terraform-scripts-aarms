@@ -9,7 +9,7 @@ module "bastion_host" {
   monitoring                           = true
   vpc_security_group_ids               = [module.bastion_sg.security_group_id]
   subnet_id                            = module.vpc.public_subnets[0]
-  key_name                             = "uat-env-key"
+  key_name                             = "qa-env-key"
 
   tags = {
     name         = "${var.env}-AARMS-API-APP"

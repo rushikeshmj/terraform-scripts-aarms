@@ -122,64 +122,8 @@ module "bastion_sg" {
       from_port   = 22
       to_port     = 22
       protocol    = "tcp"
-      description = "ss"
-      cidr_blocks = "106.216.241.128/32"
-  },
-  {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      description = "AAMT EC2Insance"
-      cidr_blocks = "10.0.2.52/32"
-  },
-  {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
       description = "Cyb 4"
-      cidr_blocks = "103.81.78.10/32"
-  },
-  {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      description = "Cyb 6"
-      cidr_blocks = "123.63.154.180/32"
-  },
-  {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      description = "AASI SBP"
-      cidr_blocks = "76.68.40.187/32"
-  },
-  {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      description = "AASI RLP Ottawa"
-      cidr_blocks = "174.93.24.127/32"
-  },
-  {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      description = "Cyb 2"
-      cidr_blocks = "103.81.79.10/32"
-  },
-  {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      description = "Cyb 5"
       cidr_blocks = "103.81.78.15/32"
-  },
-  {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      description = "Cyb 3"
-      cidr_blocks = "103.81.79.15/32"
   },
   {
       from_port   = 22
@@ -192,36 +136,64 @@ module "bastion_sg" {
       from_port   = 22
       to_port     = 22
       protocol    = "tcp"
-      description = "Cyb 1"
-      cidr_blocks = "103.81.79.35/32"
-  },
-  {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      description = "AASI SPJL CYOW"
-      cidr_blocks = "184.147.60.162/32"
-  },
-  {
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      description = "AASI RLP ALT GAT"
-      cidr_blocks = "24.203.28.142/32"
+      description = "Cyb-EON 2"
+      cidr_blocks = "14.143.170.180/32"
   },
   {
       from_port   = 22
       to_port     = 22
       protocol    = "tcp"
       description = ""
-      cidr_blocks = "142.162.10.242/32"
+      cidr_blocks = "108.171.87.73/32"
   },
   {
       from_port   = 22
       to_port     = 22
       protocol    = "tcp"
-      description = "AASI RLP Cottage"
-      cidr_blocks = "108.171.87.73/32"
+      description = "Cyb-EON 1"
+      cidr_blocks = "182.79.38.148/32"
+  },
+  {
+      from_port   = 22
+      to_port     = 22
+      protocol    = "tcp"
+      description = "Cyb 6"
+      cidr_blocks = "123.63.154.180/32"
+  },
+  {
+      from_port   = 22
+      to_port     = 22
+      protocol    = "tcp"
+      description = "AASI - RLP - Ottawa"
+      cidr_blocks = "70.51.135.85/32"
+  },
+  {
+      from_port   = 22
+      to_port     = 22
+      protocol    = "tcp"
+      description = "AASI SPJL YOW"
+      cidr_blocks = "198.84.232.169/32"
+  },
+  {
+      from_port   = 22
+      to_port     = 22
+      protocol    = "tcp"
+      description = "Cyb 3"
+      cidr_blocks = "103.81.79.35/32"
+  },
+  {
+      from_port   = 22
+      to_port     = 22
+      protocol    = "tcp"
+      description = "Cyb 5"
+      cidr_blocks = "103.81.78.10/32"
+  },
+  {
+      from_port   = 22
+      to_port     = 22
+      protocol    = "tcp"
+      description = "Cyb 1"
+      cidr_blocks = "103.81.79.15/32"
   }
 ]
 

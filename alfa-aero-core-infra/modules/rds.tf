@@ -34,7 +34,7 @@ module "rds" {
   publicly_accessible                  = false
   backup_retention_period              = 3
   iam_database_authentication_enabled  = true
-  enabled_cloudwatch_logs_exports      = ["audit", "slowquery"]
+  #enabled_cloudwatch_logs_exports      = ["audit", "slowquery"]
   monitoring_role_arn                  = "arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole"
   monitoring_interval                  = 60
   db_parameter_group_name              = "default.aurora-mysql8.0"

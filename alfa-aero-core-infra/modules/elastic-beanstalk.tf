@@ -116,7 +116,7 @@ resource "aws_elastic_beanstalk_environment" "beanstalkappenv" {
   setting {
     namespace                          = "aws:elasticbeanstalk:application:environment"
     name                               = "ASPNETCORE_ENVIRONMENT"
-    value                              = "UAT"
+    value                              = "QA"
   }
   setting {
     namespace                          = "aws:elasticbeanstalk:managedactions:platformupdate"
